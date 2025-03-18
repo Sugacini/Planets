@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/planet.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="planetOuterDiv">
+        <div class="planetDetails">
+            <div class="innerplanet">
+                <div id="imgDiv">
+                    <img src=<%=data.images%>>
+                </div>
+            <div id="content">
+                <p id="nameOfPlanet"><%=data.name%></p>
+                <p id="overviewContent"><%=data.content%></p>
+                <p style="color: white; margin: 2% 0 0 15%; font-size: 1.3em;">Source</p>
+                <div class="options">
+                    <div id="contentOverview">
+                        <a href="/overview">Overview</a>
+                    </div>
+                    <div id="internal">
+                        <a href="/internal">STRUCTUE</a> 
+                    </div>
+                    <div id="surface">
+                        <a href="/geology">SURFACE GEOLOGY</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="planetDetails1">
+            <div id="content1">
+                    <div id="rotation" class="time">
+                        <P class="footerHeading">ROTATION TIME</P>
+                        <p class="dataOfTime"><%=data.rotation%></p>
+                    </div>
+                    <div id="revolution" class="time">
+                        <P class="footerHeading">REVOLUTION TIME</P>
+                        <p class="dataOfTime"><%=data.revolution%></p>
+                    </div>
+                    <div id="radius" class="time">
+                        <P class="footerHeading">RADIUS</P>
+                        <p class="dataOfTime"><%=data.radius%></p>
+                    </div>
+                    <div id="averge" class="time">
+                        <P class="footerHeading">AVERAGE TEMP</P>
+                        <p class="dataOfTime"><%=data.temperature%></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="planetDetails.js"></script>
+</body>
+</html>
